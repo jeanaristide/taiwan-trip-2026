@@ -1,0 +1,52 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Alishan Forest Railway Booking Reminders//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+
+BEGIN:VEVENT
+UID:alishan-main-line-20261030@taiwan-trip
+DTSTAMP:20260927T132000Z
+DTSTART:20261029T215000Z
+DTEND:20261029T223000Z
+SUMMARY:🚂 Book Alishan Main Line Train (Chiayi ➔ Alishan for Nov 15)
+DESCRIPTION:Alishan Forest Railway Main Line tickets for Sunday, 15 Nov 2026 open TODAY at 06:00 AM Taiwan Time (opens 2 weeks earlier due to Friday weekend rule).\n\nBooking Site: https://afrts.forest.gov.tw/OT01_1.aspx\n\nNote: Immediate credit card payment is required upon booking.
+LOCATION:https://afrts.forest.gov.tw/OT01_1.aspx
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Alishan Main Line Train Tickets open in 10 minutes (06:00 AM)!
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:alishan-zhushan-nov16-20261102@taiwan-trip
+DTSTAMP:20260927T132000Z
+DTSTART:20261101T215000Z
+DTEND:20261101T223000Z
+SUMMARY:🌅 Book Alishan ➔ Zhushan Sunrise Train (For Mon, Nov 16)
+DESCRIPTION:Alishan Forest Railway Zhushan Line (祝山線) tickets for Monday, 16 Nov 2026 open TODAY at 06:00 AM Taiwan Time.\n\nBooking Site: https://afrts.forest.gov.tw/OT01_1.aspx\nSelect Line: 祝山線 (Zhushan Line)\nRoute: 阿里山 (Alishan) ⇄ 祝山 (Zhushan)\n\nNote: Immediate credit card payment is required.
+LOCATION:https://afrts.forest.gov.tw/OT01_1.aspx
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Zhushan Sunrise Train tickets for Nov 16 open in 10 minutes (06:00 AM)!
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:alishan-zhushan-nov17-20261103@taiwan-trip
+DTSTAMP:20260927T132000Z
+DTSTART:20261102T215000Z
+DTEND:20261102T223000Z
+SUMMARY:🌅 Book Alishan ➔ Zhushan Sunrise Train (For Tue, Nov 17)
+DESCRIPTION:Alishan Forest Railway Zhushan Line (祝山線) tickets for Tuesday, 17 Nov 2026 open TODAY at 06:00 AM Taiwan Time.\n\nBooking Site: https://afrts.forest.gov.tw/OT01_1.aspx\nSelect Line: 祝山線 (Zhushan Line)\nRoute: 阿里山 (Alishan) ⇄ 祝山 (Zhushan)\n\nNote: Immediate credit card payment is required.
+LOCATION:https://afrts.forest.gov.tw/OT01_1.aspx
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Zhushan Sunrise Train tickets for Nov 17 open in 10 minutes (06:00 AM)!
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR
