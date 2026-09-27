@@ -821,21 +821,235 @@ footer strong {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 14px;
+  }
   .hero {
-    padding: 40px 0 60px;
+    padding: 36px 0 48px;
+  }
+  .hero-badge {
+    font-size: 11.5px;
+    padding: 4px 10px;
   }
   .hero-title {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  .hero-subtitle {
+    font-size: 13.5px;
+  }
+  .hero-meta-badges {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .hero-meta-item {
+    font-size: 12px;
+    padding: 4px 10px;
   }
   .stats-grid {
     margin-top: -24px;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .stat-card {
+    padding: 12px 10px;
+  }
+  .stat-val {
+    font-size: 18px;
+  }
+  .stat-label {
+    font-size: 11px;
+  }
+  .section-header h2 {
+    font-size: 20px;
+  }
+  .section-header p {
+    font-size: 13px;
+  }
+  .map-container {
+    padding: 12px;
+    margin-bottom: 28px;
+  }
+  .map-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .map-layer-toggles {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .layer-btn {
+    flex: 1;
+    text-align: center;
+    padding: 6px 8px;
+    font-size: 11px;
   }
   #leafletMap {
-    height: 400px;
+    height: 340px;
+    border-radius: var(--radius-sm);
   }
-  .master-itinerary-table th,
+  .itinerary-nav-pane {
+    padding: 10px 10px 8px;
+  }
+  .itinerary-stop-chip {
+    padding: 5px 10px 5px 6px;
+  }
+  .itinerary-stop-title {
+    font-size: 11.5px;
+  }
+  .itinerary-stop-sub {
+    font-size: 9.5px;
+  }
+
+  /* Filter Tabs Scrollable */
+  .filter-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 6px;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-btn {
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  /* Transform Master Table to Card-Stack View on Phones */
+  .table-responsive {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    overflow: visible;
+  }
+  .master-itinerary-table {
+    display: block;
+    width: 100%;
+  }
+  .master-itinerary-table thead {
+    display: none;
+  }
+  .master-itinerary-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+  .master-itinerary-table tr.itinerary-table-row {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    margin: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .master-itinerary-table tr.itinerary-table-row:active {
+    transform: scale(0.99);
+  }
   .master-itinerary-table td {
-    padding: 10px 12px;
+    display: block;
+    padding: 12px 14px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .master-itinerary-table td:last-child {
+    border-bottom: none;
+  }
+
+  /* Cell 1: Day Header bar */
+  .master-itinerary-table td:nth-child(1) {
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 10px 14px;
+  }
+  .col-day-wrap {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .day-badge {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+  .day-date-str {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1e293b;
+  }
+  .region-tag {
+    margin-top: 0;
+    margin-left: auto;
+    font-size: 10px;
+  }
+
+  /* Cell 2: Destination headline & Pin landmarks */
+  .master-itinerary-table td:nth-child(2) {
+    padding: 12px 14px 8px;
+  }
+  .loc-title {
+    font-size: 15px;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+  .loc-pin-item {
+    font-size: 12px;
+  }
+
+  /* Cell 3: Action / Activities with underlines */
+  .master-itinerary-table td:nth-child(3) {
+    padding: 6px 14px 12px;
+  }
+  .act-bullet-item {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+  /* Cell 4: Cost Breakdown block */
+  .master-itinerary-table td:nth-child(4) {
+    background: #fafafa;
+    border-top: 1px dashed #cbd5e1;
+    padding: 10px 14px 12px;
+  }
+  .cost-box {
+    background: transparent;
+    border: none;
+    padding: 0;
+    min-width: 0;
+    gap: 3px;
+  }
+  .cost-row {
+    font-size: 11.5px;
+  }
+  .cost-total-line {
+    margin-top: 4px;
+    padding-top: 4px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cost-total-val {
+    font-size: 13px;
+  }
+
+  /* Summary cards on mobile */
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .summary-card {
+    padding: 18px 14px;
   }
 }
