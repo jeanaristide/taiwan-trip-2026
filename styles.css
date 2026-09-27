@@ -686,19 +686,22 @@ body {
 }
 
 .act-bullet-item u,
-.master-itinerary-table td u {
-  text-decoration: none;
-  border-bottom: 2px solid #2563eb;
-  font-weight: 700;
-  color: #0f172a;
-  padding-bottom: 1px;
+.master-itinerary-table td u,
+u {
+  text-decoration: underline !important;
+  text-decoration-color: #2563eb !important;
+  text-decoration-thickness: 2.5px !important;
+  text-underline-offset: 3.5px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
   transition: all 0.2s ease;
 }
 
 .act-bullet-item u:hover,
-.master-itinerary-table td u:hover {
-  border-bottom-color: #1d4ed8;
-  color: #1d4ed8;
+.master-itinerary-table td u:hover,
+u:hover {
+  text-decoration-color: #1d4ed8 !important;
+  color: #1d4ed8 !important;
 }
 
 .wfh-meeting-alert {
