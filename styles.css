@@ -685,6 +685,22 @@ body {
   color: #0f172a;
 }
 
+.act-bullet-item u,
+.master-itinerary-table td u {
+  text-decoration: none;
+  border-bottom: 2px solid #2563eb;
+  font-weight: 700;
+  color: #0f172a;
+  padding-bottom: 1px;
+  transition: all 0.2s ease;
+}
+
+.act-bullet-item u:hover,
+.master-itinerary-table td u:hover {
+  border-bottom-color: #1d4ed8;
+  color: #1d4ed8;
+}
+
 .wfh-meeting-alert {
   background: #fffbeb;
   border-left: 3px solid #f59e0b;
