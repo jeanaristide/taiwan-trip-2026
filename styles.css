@@ -714,6 +714,121 @@ u:hover {
   margin-top: 4px;
 }
 
+/* Callout & Trip Reference Boxes */
+.trip-resource-box {
+  margin-top: 10px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.trip-resource-box.blue {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.trip-resource-box.amber {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.resource-box-title {
+  font-weight: 800;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: 12.5px;
+}
+
+.resource-links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.resource-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 12px;
+  transition: var(--transition);
+}
+
+.resource-link-item:hover {
+  text-decoration: underline;
+  color: #1e40af;
+}
+
+.resource-badge-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #2563eb;
+  color: white !important;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 6px;
+  text-decoration: none !important;
+  transition: all 0.2s;
+  width: fit-content;
+  margin-top: 4px;
+}
+
+.resource-badge-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.resource-badge-btn.green {
+  background: #059669;
+}
+
+.resource-badge-btn.green:hover {
+  background: #047857;
+}
+
+.tour-options-switch {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tour-option-card {
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 12.5px;
+}
+
+.tour-option-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.tour-option-tag.recommended {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.tour-option-tag.diy {
+  background: #f1f5f9;
+  color: #475569;
+}
+
 /* Table Column 4: Cost */
 .cost-box {
   display: flex;
