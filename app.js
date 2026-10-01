@@ -23,7 +23,7 @@ const visitedLocations = [
     category: "Vibrant Cultural Art",
     color: "#d97706",
     coords: [24.1337152, 120.6098437],
-    day: "Day 5 (17 Nov)",
+    day: "Day 7 (19 Nov)",
     desc: "Former military dependents' village saved from demolition through vibrant, whimsical folk-art murals painted by Grandpa Rainbow (Huang Yung-fu).",
     gmapsQuery: "Rainbow Village, Taichung"
   },
@@ -47,21 +47,21 @@ const visitedLocations = [
     category: "Indigenous Heritage & Lake Ropeway",
     color: "#d97706",
     coords: [23.865328, 120.948187],
-    day: "Day 6 (18 Nov)",
+    day: "Day 7 (19 Nov)",
     desc: "Extensive open-air heritage village showcasing authentic architecture, crafts, and ritual dances of Taiwan's indigenous tribes, connected to Sun Moon Lake via panoramic cable car.",
     gmapsQuery: "Formosan Aboriginal Culture Village, Nantou"
   },
   {
     pinId: 5,
-    name: "Xitou Nature Education Area & Monster Village",
-    nativeName: "溪頭自然教育園區 & 妖怪村",
-    region: "Nantou County (Lugu)",
-    category: "High Mountain Forest & Folklore",
-    color: "#d97706",
-    coords: [23.6745178, 120.7972515],
-    day: "Day 7 (19 Nov)",
-    desc: "Misty experimental cedar forest with a canopy Skywalk, university bamboo arboretum, and the quirky Japanese folklore-themed Kuma Monster Village.",
-    gmapsQuery: "Xitou Nature Education Area, Nantou"
+    name: "Sun Moon Lake (Xiangshan & Shuishe Pier)",
+    nativeName: "日月潭 (向山遊客中心 & 水社碼頭)",
+    region: "Nantou County (Yuchi)",
+    category: "Alpine Lake & Scenic Cycling",
+    color: "#0284c7",
+    coords: [23.8517, 120.9022],
+    day: "Day 6 (18 Nov)",
+    desc: "Taiwan's premier alpine lake. Features the CNN-acclaimed lakeside cycling path to Xiangshan Visitor Center, electric boat cruises, and panoramic lakeside piers.",
+    gmapsQuery: "Xiangshan Visitor Center, Sun Moon Lake, Nantou"
   },
   {
     pinId: 6,
@@ -71,8 +71,8 @@ const visitedLocations = [
     category: "Historic Forest Railway Hub",
     color: "#059669",
     coords: [23.5051199, 120.6949355],
-    day: "Day 5 (17 Nov)",
-    desc: "High-altitude mountain enclave surrounded by cedar forests, famous for historic railway locomotives and the legendary Fenqihu Railway Bento.",
+    day: "Day 4 (16 Nov)",
+    desc: "High-altitude mountain enclave surrounded by cedar forests, famous for historic railway locomotives and the legendary hot Fenqihu Railway Bento on the ascent to Alishan.",
     gmapsQuery: "Fenqihu Old Street, Chiayi"
   },
   {
@@ -131,7 +131,7 @@ const visitedLocations = [
     category: "Ancient Sacred Red Cypresses",
     color: "#059669",
     coords: [23.5167437, 120.8096083],
-    day: "Day 4 (16 Nov)",
+    day: "Day 5 (17 Nov)",
     desc: "Peaceful elevated boardwalk winding past 36 preserved ancient Taiwanese red cypresses dating back 800 to 2,000+ years.",
     gmapsQuery: "Giant Tree Cluster Trail, Alishan"
   },
@@ -143,8 +143,8 @@ const visitedLocations = [
     category: "National Alpine Forest",
     color: "#059669",
     coords: [23.5109539, 120.8034992],
-    day: "Day 4 (16 Nov)",
-    desc: "World-renowned misty alpine reserve at 2,200m elevation featuring narrow-gauge forest railways, Sister Ponds, and Shouzhen Temple.",
+    day: "Days 4 & 5 (16 & 17 Nov)",
+    desc: "World-renowned misty alpine reserve at 2,200m elevation featuring 2-night mountain stay, narrow-gauge forest railways, Sister Ponds, and ancient cedar trails.",
     gmapsQuery: "Alishan National Forest Recreation Area"
   },
   {
@@ -190,10 +190,10 @@ const itineraryOverviewStops = [
   { id: "leg1", step: 1, flag: "🏙️", title: "Taipei Base", sub: "13 Nov · Day 1", coords: [25.0441, 121.5085], zoom: 13 },
   { id: "leg2", step: 2, flag: "🌿", title: "Wulai Falls & Train", sub: "14 Nov · Day 2", coords: [24.8550, 121.5515], zoom: 14 },
   { id: "leg3", step: 3, flag: "🎓", title: "LDS Worship & CCU", sub: "15 Nov · Day 3", coords: [23.5586, 120.4719], zoom: 14 },
-  { id: "leg4", step: 4, flag: "🌲", title: "Eryanping & Alishan", sub: "16 Nov · Day 4", coords: [23.5110, 120.8035], zoom: 14 },
-  { id: "leg5", step: 5, flag: "🌅", title: "Zhushan, Fenqihu & Taichung", sub: "17 Nov · Day 5", coords: [24.1337, 120.6098], zoom: 13 },
-  { id: "leg6", step: 6, flag: "🛶", title: "Formosan Village & Lake", sub: "18 Nov · Day 6", coords: [23.8653, 120.9482], zoom: 14 },
-  { id: "leg7", step: 7, flag: "🎋", title: "Xitou & Monster Village", sub: "19 Nov · Day 7", coords: [23.6745, 120.7973], zoom: 14 },
+  { id: "leg4", step: 4, flag: "🌲", title: "Eryanping & Fenqihu", sub: "16 Nov · Day 4", coords: [23.5051, 120.6949], zoom: 13 },
+  { id: "leg5", step: 5, flag: "🌅", title: "Zhushan Sunrise & Alishan", sub: "17 Nov · Day 5", coords: [23.5136, 120.8131], zoom: 14 },
+  { id: "leg6", step: 6, flag: "🛶", title: "Alishan ➔ Sun Moon Lake", sub: "18 Nov · Day 6", coords: [23.8524, 120.9150], zoom: 13 },
+  { id: "leg7", step: 7, flag: "🚡", title: "Formosan Village & Taichung", sub: "19 Nov · Day 7", coords: [23.8653, 120.9482], zoom: 13 },
   { id: "leg8", step: 8, flag: "🚆", title: "Taipei & Alumni Reunion", sub: "20 Nov · Day 8", coords: [25.0441, 121.5085], zoom: 13 },
   { id: "leg9", step: 9, flag: "🌊", title: "Shen'ao Rail & Heping Island", sub: "21 Nov · Day 9", coords: [25.1450, 121.7900], zoom: 13 },
   { id: "leg10", step: 10, flag: "🏛️", title: "Temple Worship & TPE", sub: "22 Nov · Day 10", coords: [25.0298, 121.5284], zoom: 14 }
@@ -213,17 +213,18 @@ const chronologicalRouteCoords = [
   [23.5586, 120.4719], // CCU Campus (Minxiong)
   [23.4795, 120.4497], // Chiayi City
   [23.4176, 120.6508], // Eryanping Trail (Xiding)
-  [23.5110, 120.8035], // Alishan Forest Recreation Area & Giant Trees
-  [23.5136, 120.8131], // Zhushan Sunrise Lookout
   [23.5051, 120.6949], // Fenqihu Old Street
-  [24.1337, 120.6098], // Rainbow Village (Taichung)
-  [24.1373, 120.6869], // Taichung Central Base
-  [23.8653, 120.9482], // Formosan Aboriginal Culture Village
+  [23.5110, 120.8035], // Alishan Forest Recreation Area (Night 1: 16 Nov)
+  [23.5136, 120.8131], // Zhushan Sunrise Lookout (Morning 17 Nov)
+  [23.5167, 120.8096], // Giant Tree Cluster Trail & Shuishan (Day 17 Nov, Night 2 in Alishan)
+  [23.4850, 120.8800], // Tataka / New Central Cross-Island Highway (Scenic transit to Sun Moon Lake)
+  [23.8517, 120.9022], // Sun Moon Lake (Xiangshan & Shuishe) (18 Nov)
   [23.8524, 120.9348], // Sun Moon Lake (Ita Thao)
-  [24.1373, 120.6869], // Return Taichung
-  [23.6745, 120.7973], // Xitou Nature Education Area & Monster Village
-  [24.1373, 120.6869], // Return Taichung
-  [25.0441, 121.5085], // THSR Return to Taipei
+  [24.1373, 120.6869], // Taichung Central Base (Night 1: 18 Nov)
+  [23.8653, 120.9482], // Formosan Aboriginal Culture Village & Ropeway (19 Nov)
+  [24.1337, 120.6098], // Rainbow Village (Taichung) & WFH Window (Night 2: 19 Nov)
+  [24.1373, 120.6869], // Taichung Base
+  [25.0441, 121.5085], // THSR Return to Taipei (20 Nov)
   [25.1292, 121.8145], // Shen'ao Rail Bike (Badouzi)
   [25.1617, 121.7645], // Heping Island GeoPark
   [25.0441, 121.5085], // Return Taipei
