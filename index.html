@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
   <!-- Custom Styles with Cache Buster -->
-  <link rel="stylesheet" href="styles.css?v=3.5">
+  <link rel="stylesheet" href="styles.css?v=3.6">
 
   <!-- Guaranteed Inline Underline Styles (Bypasses Browser CSS Caches) -->
   <style>
@@ -131,6 +131,44 @@
       <p>Chronological schedule with bulleted activities, verified transport connections, and shared cost estimates.</p>
     </div>
 
+    <!-- Smart Luggage Logistics Strategy Card -->
+    <div class="luggage-strategy-box">
+      <div class="luggage-strategy-header">
+        <span class="luggage-strategy-title">
+          🧳 Smart Luggage Strategy &amp; Seamless Mountain Logistics
+        </span>
+        <span class="luggage-inventory-tag">
+          Combined Load: 3 Large Suitcases + 2 Carry-Ons + 2 Backpacks
+        </span>
+      </div>
+      <div class="luggage-strategy-grid">
+        <div class="luggage-strategy-item">
+          <strong>🏨 1. The "Taipei Hub Storage" Principle (Days 3–7)</strong>
+          <p>
+            Because you return to <u>Just Sleep Taipei Ximending</u> on Nov 20, the hotel provides <strong>free locked multi-day luggage storage</strong>! On Nov 15, leave the 3 heavy checked suitcases safely in Taipei. Pack 5 days of clothing into your 2 small carry-ons + 2 backpacks. This eliminates lugging heavy bags on mountain buses and stairs!
+          </p>
+        </div>
+        <div class="luggage-strategy-item">
+          <strong>🚕 2. Station-to-Hotel Taxi Handoffs</strong>
+          <p>
+            At <u>Taipei Main Station</u> (Day 1) and <u>Taichung Station</u> (Day 6), take a short official taxi (~NT$120–150) directly to the hotel lobby rather than wheeling multiple suitcases through crowded pedestrian streets and subway stairs.
+          </p>
+        </div>
+        <div class="luggage-strategy-item">
+          <strong>🚗 3. Chiayi ➔ Alishan Mountain Charter (Day 4)</strong>
+          <p>
+            <u>Eryanping Trail</u> (1,000+ stairs) has no public luggage lockers. Book a private scenic car charter from <u>Chiayi</u> to <u>Alishan</u> (~NT$2,800–3,200). Bags stay securely in the trunk while you hike Eryanping tea terraces and eat <u>Fenqihu Railway Bento</u>, dropping you right at your Alishan hotel door.
+          </p>
+        </div>
+        <div class="luggage-strategy-item">
+          <strong>🚤 4. Sun Moon Lake Luggage Depot (Day 6)</strong>
+          <p>
+            Upon arriving from Alishan, deposit your carry-on bags at the <u>Shuishe Visitor Center</u> luggage service counter (NT$50/bag) or bike rental shop. Enjoy the solar boat cruise to <u>Ita Thao Pier</u> and Xiangshan cycling 100% hands-free!
+          </p>
+        </div>
+      </div>
+    </div>
+
     <!-- Region Filters -->
     <div class="filter-tabs">
       <button type="button" class="filter-btn active" data-filter="all">All Stops (10 Days)</button>
@@ -165,26 +203,29 @@
               <div class="loc-title">Taoyuan Airport ➔ Taipei Ximending</div>
               <ul class="loc-pins-list">
                 <li class="loc-pin-item">📍 <strong>Taoyuan International Airport (TPE)</strong></li>
+                <li class="loc-pin-item">🚄 <strong>Taoyuan Airport MRT Express</strong></li>
                 <li class="loc-pin-item">🏨 <strong>Just Sleep Taipei Ximending</strong></li>
+                <li class="loc-pin-item">🚕 <strong>Taipei Main Station (Taxi Stand)</strong></li>
               </ul>
             </td>
             <td>
               <ul class="act-bullets-list">
                 <li class="act-bullet-item">Sister arrives from <u>Sydney (SYD)</u>; User arrives from <u>Manila (MNL)</u>.</li>
-                <li class="act-bullet-item">Board the <u>Taoyuan Airport MRT Express</u> straight to <u>Taipei Main Station</u> (36 mins).</li>
-                <li class="act-bullet-item">Transfer to <u>Just Sleep Taipei Ximending</u> and complete hotel check-in.</li>
-                <li class="act-bullet-item">Unpack, rest, and settle into the trip.</li>
+                <li class="act-bullet-item">Board the <u>Taoyuan Airport MRT Express</u> straight to <u>Taipei Main Station</u> (36 mins; spacious luggage racks with locks in every carriage).</li>
+                <li class="act-bullet-item"><em>Luggage-friendly transit</em>: From <u>Taipei Main Station</u> MRT exit, take a quick 5-min taxi directly to <u>Just Sleep Taipei Ximending</u> lobby (~NT$130) to avoid wheeling 3 checked bags + 2 carry-ons along busy streets.</li>
+                <li class="act-bullet-item">Complete hotel check-in, unpack, rest, and settle into the trip.</li>
                 <li class="act-bullet-item">Dinner at own arrangement in <u>Taipei</u> (User's preferred spots).</li>
               </ul>
             </td>
             <td>
               <div class="cost-box">
                 <div class="cost-row"><span>Airport MRT (x2):</span> <strong>NT$300</strong></div>
+                <div class="cost-row"><span>Station-to-hotel taxi:</span> <strong>NT$130</strong></div>
                 <div class="cost-row"><span>Hotel (Twin Room):</span> <strong>NT$3,200</strong></div>
                 <div class="cost-row"><span>Taipei Meals:</span> <em>Own arrangement</em></div>
                 <div class="cost-total-line">
-                  <span class="cost-total-val">NT$3,500</span>
-                  <span class="cost-total-php">(₱6,230 PHP)</span>
+                  <span class="cost-total-val">NT$3,630</span>
+                  <span class="cost-total-php">(₱6,461 PHP)</span>
                 </div>
               </div>
             </td>
@@ -287,18 +328,21 @@
               <div class="loc-title">LDS Sunday Worship ➔ Chiayi &amp; CCU</div>
               <ul class="loc-pins-list">
                 <li class="loc-pin-item">🏛️ <strong>Taipei Taiwan Temple / Jinhua St Chapel</strong></li>
+                <li class="loc-pin-item">🏨 <strong>Just Sleep Taipei Ximending (Luggage Hold)</strong></li>
                 <li class="loc-pin-item">🚄 <strong>THSR Bullet Train (Taipei ➔ Chiayi)</strong></li>
                 <li class="loc-pin-item"><span class="pin-num-badge">#1</span> <strong>National Chung Cheng University (CCU)</strong></li>
-                <li class="loc-pin-item">📍 <strong>Chiayi City Center</strong></li>
+                <li class="loc-pin-item">📍 <strong>Chiayi City Hotel Base</strong></li>
               </ul>
             </td>
             <td>
               <ul class="act-bullets-list">
+                <li class="act-bullet-item">Morning check-out at <u>Just Sleep Taipei Ximending</u>; deposit all luggage at hotel front desk.</li>
                 <li class="act-bullet-item">Attend Sunday LDS worship services (09:00 – 12:00) at <u>Taipei Taiwan Temple</u> / <u>Jinhua St Chapel</u>.</li>
                 <li class="act-bullet-item">Lunch at own arrangement in <u>Taipei</u>.</li>
-                <li class="act-bullet-item">Board the 13:00 Southbound <u>THSR Bullet Train</u> from <u>Taipei Main Station</u> to <u>Chiayi THSR Station</u> (arrives 14:15).</li>
-                <li class="act-bullet-item">Shuttle/taxi to <u>Minxiong</u> for an alumni campus stroll through your Master's alma mater, <u>National Chung Cheng University (CCU)</u> (<u>Tranquility Lake</u>, bridges, and lush brick grounds).</li>
-                <li class="act-bullet-item">Transit to <u>Chiayi City</u> hotel; check in.</li>
+                <li class="act-bullet-item"><em>Smart Luggage Storage</em>: Return to <u>Just Sleep Taipei Ximending</u> to leave your 3 large checked suitcases safely stored (free multi-day storage for returning guests!). Carry only 2 small carry-ons + 2 backpacks for the 5-night central mountain loop.</li>
+                <li class="act-bullet-item">Board the 13:00 Southbound <u>THSR Bullet Train</u> from <u>Taipei Main Station</u> to <u>Chiayi THSR Station</u> (arrives 14:15; overhead racks easily fit carry-ons).</li>
+                <li class="act-bullet-item"><em>Hotel-First Transit</em>: Taxi or BRT directly to your <u>Chiayi City</u> hotel first to drop carry-ons and check in.</li>
+                <li class="act-bullet-item">Hands-free afternoon taxi to <u>Minxiong</u> for a nostalgic alumni stroll through <u>National Chung Cheng University (CCU)</u> (<u>Tranquility Lake</u>, bridges, and brick pavilions).</li>
                 <li class="act-bullet-item">Dinner: Famous Chiayi Turkey Rice at <u>Smart Fish</u> / <u>Liu Li Huo</u> on <u>Wenhua Road</u>.</li>
               </ul>
             </td>
@@ -306,12 +350,12 @@
               <div class="cost-box">
                 <div class="cost-row"><span>Taipei local transit:</span> <strong>NT$100</strong></div>
                 <div class="cost-row"><span>THSR Reserved (x2):</span> <strong>NT$2,160</strong></div>
-                <div class="cost-row"><span>CCU Minxiong transit:</span> <strong>NT$550</strong></div>
+                <div class="cost-row"><span>Chiayi taxi/BRT transit:</span> <strong>NT$650</strong></div>
                 <div class="cost-row"><span>Chiayi Turkey Rice:</span> <strong>NT$400</strong></div>
                 <div class="cost-row"><span>Chiayi Hotel (Twin):</span> <strong>NT$2,200</strong></div>
                 <div class="cost-total-line">
-                  <span class="cost-total-val">NT$5,410</span>
-                  <span class="cost-total-php">(₱9,630 PHP)</span>
+                  <span class="cost-total-val">NT$5,510</span>
+                  <span class="cost-total-php">(₱9,808 PHP)</span>
                 </div>
               </div>
             </td>
@@ -332,17 +376,18 @@
                 <li class="loc-pin-item"><span class="pin-num-badge">#7</span> <strong>Eryanping Trail (Xiding)</strong></li>
                 <li class="loc-pin-item"><span class="pin-num-badge">#6</span> <strong>Fenqihu Old Street</strong></li>
                 <li class="loc-pin-item"><span class="pin-num-badge">#12</span> <strong>Alishan National Forest Recreation Area</strong></li>
+                <li class="loc-pin-item">🚗 <strong>Private Mountain Charter / Express Bus</strong></li>
                 <li class="loc-pin-item">🏨 <strong>Alishan Shermuh Hotel / Gau Shan Ching (Night 1 of 2)</strong></li>
                 <li class="loc-pin-item">🍲 <strong>Shanbin Restaurant (Alishan)</strong></li>
               </ul>
             </td>
             <td>
               <ul class="act-bullets-list">
-                <li class="act-bullet-item">Depart <u>Chiayi</u> early via mountain <u>Bus 7322</u> ascending the misty <u>Alishan Highway</u>.</li>
-                <li class="act-bullet-item">Stop at <u>Xiding</u> to hike the <u>Eryanping Trail</u> (Pin #7) timber boardwalk through high-mountain tea plantations and sea-of-clouds viewing pavilions.</li>
+                <li class="act-bullet-item"><em>Luggage-Friendly Transport Recommendation</em>: Hire a private scenic mountain car/taxi charter from <u>Chiayi</u> up to <u>Alishan</u> (~NT$2,800–3,200 total for 2). Your carry-on bags stay securely in the trunk at all times! (Alternatively, take mountain <u>Bus 7322</u> with carry-on luggage stored at <u>Fenqihu Station</u> lockers).</li>
+                <li class="act-bullet-item">Stop at <u>Xiding</u> to hike <u>Eryanping Trail</u> (Pin #7) timber boardwalk through high-mountain tea plantations and sea-of-clouds viewing pavilions (100% hands-free while driver waits).</li>
                 <li class="act-bullet-item">Continue to <u>Fenqihu Old Street</u> (Pin #6); stroll through historic cedar railway tracks and savor the famous authentic <u>Fenqihu Railway Bento</u> in a classic tin box.</li>
-                <li class="act-bullet-item">Afternoon mountain bus up to <u>Alishan National Forest Recreation Area</u> (Pin #12) gate at 2,200m elevation.</li>
-                <li class="act-bullet-item">Check in at <u>Alishan Shermuh Hotel</u> / <u>Gau Shan Ching</u> (2-night base: 16–18 Nov).</li>
+                <li class="act-bullet-item">Ascend the misty <u>Alishan Highway</u> up to <u>Alishan National Forest Recreation Area</u> (Pin #12) gate at 2,200m elevation.</li>
+                <li class="act-bullet-item">Drop off directly at <u>Alishan Shermuh Hotel</u> / <u>Gau Shan Ching</u> (2-night base: 16–18 Nov); check in.</li>
                 <li class="act-bullet-item">Relaxed late afternoon stroll around <u>Alishan Station</u> and <u>Zhaoping Park</u> as alpine dusk settles in.</li>
                 <li class="act-bullet-item">Dinner: Hearty stone hot pot at <u>Shanbin Restaurant</u> in <u>Alishan Village</u>.</li>
               </ul>
@@ -382,14 +427,14 @@
             </td>
             <td>
               <div class="cost-box">
-                <div class="cost-row"><span>Mountain Bus 7322:</span> <strong>NT$500</strong></div>
+                <div class="cost-row"><span>Mountain Charter / Bus (x2):</span> <strong>NT$1,500</strong></div>
                 <div class="cost-row"><span>Fenqihu Bento lunch:</span> <strong>NT$360</strong></div>
                 <div class="cost-row"><span>Alishan entry e-tickets:</span> <strong>NT$400</strong></div>
                 <div class="cost-row"><span>Shanbin hot pot dinner:</span> <strong>NT$800</strong></div>
                 <div class="cost-row"><span>Alishan Hotel (Night 1):</span> <strong>NT$3,600</strong></div>
                 <div class="cost-total-line">
-                  <span class="cost-total-val">NT$5,660</span>
-                  <span class="cost-total-php">(₱10,075 PHP)</span>
+                  <span class="cost-total-val">NT$6,660</span>
+                  <span class="cost-total-php">(₱11,855 PHP)</span>
                 </div>
               </div>
             </td>
@@ -470,6 +515,7 @@
               <div class="loc-title">Alishan ➔ Sun Moon Lake (Boat Cruise &amp; Bikeway) ➔ Taichung</div>
               <ul class="loc-pins-list">
                 <li class="loc-pin-item"><span class="pin-num-badge">#5</span> <strong>Sun Moon Lake (Xiangshan &amp; Shuishe Pier)</strong></li>
+                <li class="loc-pin-item">🧳 <strong>Shuishe Visitor Center (Luggage Deposit)</strong></li>
                 <li class="loc-pin-item">🌊 <strong>Ita Thao Lakeside Pier</strong></li>
                 <li class="loc-pin-item">🚴 <strong>Sun Moon Lake Bikeway (CNN Top 10)</strong></li>
                 <li class="loc-pin-item">🏨 <strong>Taichung Hotel Base (Night 1 of 2)</strong></li>
@@ -478,26 +524,29 @@
             <td>
               <ul class="act-bullets-list">
                 <li class="act-bullet-item">Optional second sunrise chance at <u>Zhushan</u> or leisurely morning waking up in the crisp mountain air of <u>Alishan</u>; breakfast and hotel check-out.</li>
-                <li class="act-bullet-item">09:00 board the scenic trans-mountain transit from <u>Alishan</u> directly across the <u>Central Mountain Range</u> to <u>Sun Moon Lake</u> via <u>Yuanlin Bus 6739</u> (scenic highway passing the <u>Tataka / Yushan National Park</u> border vista).</li>
+                <li class="act-bullet-item">09:00 board the scenic trans-mountain transit from <u>Alishan</u> directly across the <u>Central Mountain Range</u> to <u>Sun Moon Lake</u> via <u>Yuanlin Bus 6739</u> (scenic highway passing the <u>Tataka / Yushan National Park</u> border vista; carry-on luggage stored comfortably in the midibus hold).</li>
                 <li class="act-bullet-item">Arrive at <u>Sun Moon Lake (Shuishe Pier)</u> (Pin #5) around midday.</li>
+                <li class="act-bullet-item"><em>Hands-Free Luggage Drop</em>: Immediately deposit your carry-on bags at the <u>Shuishe Visitor Center</u> luggage service center (NT$50/bag) or bicycle rental shop.</li>
                 <li class="act-bullet-item">Enjoy a lakeside lunch featuring Thao indigenous specialty dishes in <u>Shuishe Village</u>.</li>
                 <li class="act-bullet-item">Hop on the <u>Sun Moon Lake Solar Ferry / Boat Cruise</u> across the turquoise waters to <u>Ita Thao Pier</u>; stroll <u>Ita Thao Shopping District</u> for black tea treats and wild boar snacks.</li>
                 <li class="act-bullet-item">Rent bicycles to pedal along the world-renowned <u>Sun Moon Lake Bikeway</u> stretching towards the architectural <u>Xiangshan Visitor Center</u> and panoramic <u>Xiangshan Viewing Platform</u>.</li>
-                <li class="act-bullet-item">Late afternoon express coach (<u>Taiwan Tourist Shuttle 6670</u>) from <u>Sun Moon Lake</u> to <u>Taichung City</u> (~75 mins).</li>
-                <li class="act-bullet-item">Check in at <u>Taichung Hotel Base</u> (2-night base: 18–20 Nov).</li>
+                <li class="act-bullet-item">Retrieve carry-on bags at 16:30; board the express coach (<u>Taiwan Tourist Shuttle 6670</u>) from <u>Sun Moon Lake</u> to <u>Taichung City</u> (~75 mins).</li>
+                <li class="act-bullet-item">Take a quick 5-min taxi from Taichung Station directly to <u>Taichung Hotel Base</u> (2-night base: 18–20 Nov); check in.</li>
                 <li class="act-bullet-item">Dinner: Local culinary favorites in <u>Taichung</u> (e.g. <u>Yizhong Street</u> or central local dining).</li>
               </ul>
             </td>
             <td>
               <div class="cost-box">
                 <div class="cost-row"><span>Bus 6739 Alishan ➔ SML:</span> <strong>NT$660</strong></div>
+                <div class="cost-row"><span>SML luggage lockers (x2):</span> <strong>NT$100</strong></div>
                 <div class="cost-row"><span>SML Ferry Cruise (x2):</span> <strong>NT$600</strong></div>
                 <div class="cost-row"><span>Bikeway &amp; lakeside lunch:</span> <strong>NT$900</strong></div>
                 <div class="cost-row"><span>Express Bus SML ➔ Taichung:</span> <strong>NT$400</strong></div>
+                <div class="cost-row"><span>Taichung Station taxi:</span> <strong>NT$120</strong></div>
                 <div class="cost-row"><span>Taichung Hotel (Night 1):</span> <strong>NT$2,400</strong></div>
                 <div class="cost-total-line">
-                  <span class="cost-total-val">NT$4,960</span>
-                  <span class="cost-total-php">(₱8,829 PHP)</span>
+                  <span class="cost-total-val">NT$5,180</span>
+                  <span class="cost-total-php">(₱9,220 PHP)</span>
                 </div>
               </div>
             </td>
@@ -562,15 +611,17 @@
               <div class="loc-title">THSR to Taipei ➔ Alumni Friends Reunion</div>
               <ul class="loc-pins-list">
                 <li class="loc-pin-item">🚄 <strong>THSR Bullet Train (Taichung ➔ Taipei)</strong></li>
-                <li class="loc-pin-item">🏨 <strong>Just Sleep Taipei Ximending</strong></li>
+                <li class="loc-pin-item">🚕 <strong>Taipei Main Station Taxi Stand</strong></li>
+                <li class="loc-pin-item">🏨 <strong>Just Sleep Taipei Ximending (Reunite with Bags)</strong></li>
                 <li class="loc-pin-item">🎉 <strong>Taipei (University Master's Friends Dinner)</strong></li>
               </ul>
             </td>
             <td>
               <ul class="act-bullets-list">
                 <li class="act-bullet-item">Enjoy a relaxed breakfast in <u>Taichung</u>; hotel check-out.</li>
-                <li class="act-bullet-item">Board mid-morning <u>THSR Bullet Train</u> back to <u>Taipei Main Station</u> (smooth 45-min transit).</li>
-                <li class="act-bullet-item">Check in at <u>Just Sleep Taipei Ximending</u>.</li>
+                <li class="act-bullet-item">Take a quick taxi from hotel to <u>Taichung THSR Station</u>; board mid-morning <u>THSR Bullet Train</u> back to <u>Taipei Main Station</u> (smooth 45-min transit).</li>
+                <li class="act-bullet-item">Take a quick 5-min taxi directly from <u>Taipei Main Station</u> taxi stand to <u>Just Sleep Taipei Ximending</u> (~NT$130).</li>
+                <li class="act-bullet-item"><em>Luggage Reunion</em>: Check in and retrieve your 3 stored large checked suitcases from the front desk; consolidate into your room for the final 2 nights in Taipei.</li>
                 <li class="act-bullet-item">Free afternoon for light WFH, rest, or stroll around <u>Taipei</u>.</li>
                 <li class="act-bullet-item"><strong>18:00 onwards: Friday evening dinner and lively reunion socializing with university master's friends in <u>Taipei</u>!</strong></li>
               </ul>
@@ -579,12 +630,12 @@
               <div class="cost-box">
                 <div class="cost-row"><span>Taichung breakfast:</span> <strong>NT$300</strong></div>
                 <div class="cost-row"><span>THSR Taichung ➔ Taipei:</span> <strong>NT$1,400</strong></div>
-                <div class="cost-row"><span>Taipei local transit:</span> <strong>NT$100</strong></div>
+                <div class="cost-row"><span>Taipei Station taxi:</span> <strong>NT$130</strong></div>
                 <div class="cost-row"><span>Hotel (Twin Room):</span> <strong>NT$3,200</strong></div>
                 <div class="cost-row"><span>Reunion dinner:</span> <em>Own arrangement</em></div>
                 <div class="cost-total-line">
-                  <span class="cost-total-val">NT$5,000</span>
-                  <span class="cost-total-php">(₱8,900 PHP)</span>
+                  <span class="cost-total-val">NT$5,030</span>
+                  <span class="cost-total-php">(₱8,953 PHP)</span>
                 </div>
               </div>
             </td>
@@ -673,24 +724,28 @@
               <div class="loc-title">LDS Sunday Worship ➔ Airport Departures</div>
               <ul class="loc-pins-list">
                 <li class="loc-pin-item">🏛️ <strong>Taipei Taiwan Temple / Jinhua St Chapel</strong></li>
+                <li class="loc-pin-item">🏨 <strong>Just Sleep Taipei Ximending (Final Luggage Hold)</strong></li>
+                <li class="loc-pin-item">🚄 <strong>Taoyuan Airport MRT Express</strong></li>
                 <li class="loc-pin-item">✈️ <strong>Taoyuan International Airport (TPE)</strong></li>
               </ul>
             </td>
             <td>
               <ul class="act-bullets-list">
+                <li class="act-bullet-item">Morning check-out at <u>Just Sleep Taipei Ximending</u>; leave all 5 bags (3 checked + 2 carry-ons) safely with the hotel front desk.</li>
                 <li class="act-bullet-item">Attend Sunday LDS worship services (09:00 – 12:00) at <u>Taipei Taiwan Temple</u> / <u>Jinhua St Chapel</u>.</li>
                 <li class="act-bullet-item">Lunch at own arrangement in <u>Taipei</u>.</li>
-                <li class="act-bullet-item">Retrieve luggage from <u>Just Sleep Taipei Ximending</u>; board <u>Taoyuan Airport MRT Express</u> to <u>TPE Terminal</u>.</li>
-                <li class="act-bullet-item">Check in for evening return flights (Sister to <u>Sydney (SYD)</u>, User to <u>Manila (MNL)</u>).</li>
+                <li class="act-bullet-item">Return to <u>Just Sleep Taipei Ximending</u> to retrieve all luggage; take a quick taxi to <u>Taipei Main Station</u> for <u>Taoyuan Airport MRT Express</u> (or direct airport taxi ~NT$1,200 for 5 bags).</li>
+                <li class="act-bullet-item">Check in at <u>Taoyuan International Airport (TPE)</u> for evening international return flights (Sister to <u>Sydney (SYD)</u>, User to <u>Manila (MNL)</u>).</li>
               </ul>
             </td>
             <td>
               <div class="cost-box">
-                <div class="cost-row"><span>Local MRT &amp; Airport MRT:</span> <strong>NT$400</strong></div>
+                <div class="cost-row"><span>Local transit &amp; taxi:</span> <strong>NT$250</strong></div>
+                <div class="cost-row"><span>Airport MRT (x2):</span> <strong>NT$300</strong></div>
                 <div class="cost-row"><span>Taipei Lunch:</span> <em>Own arrangement</em></div>
                 <div class="cost-total-line">
-                  <span class="cost-total-val">NT$400</span>
-                  <span class="cost-total-php">(₱712 PHP)</span>
+                  <span class="cost-total-val">NT$550</span>
+                  <span class="cost-total-php">(₱979 PHP)</span>
                 </div>
               </div>
             </td>
@@ -710,16 +765,16 @@
           <tbody>
             <tr><td>🏨 Twin-Share Hotels (9 Nights total):</td><td style="text-align: right;"><strong>NT$27,000</strong> (~₱48,060 PHP)</td></tr>
             <tr><td>🚄 High-Speed Rail &amp; Trains (THSR &amp; TRA):</td><td style="text-align: right;"><strong>NT$4,960</strong> (~₱8,829 PHP)</td></tr>
-            <tr><td>🚌 Mountain Express Buses &amp; Shuttles:</td><td style="text-align: right;"><strong>NT$3,470</strong> (~₱6,177 PHP)</td></tr>
+            <tr><td>🚌 Mountain Charter, Shuttles &amp; Station Taxis:</td><td style="text-align: right;"><strong>NT$4,650</strong> (~₱8,277 PHP)</td></tr>
             <tr><td>🎟️ Attractions, Parks &amp; Ropeway Tickets:</td><td style="text-align: right;"><strong>NT$4,800</strong> (~₱8,544 PHP)</td></tr>
             <tr><td>🍜 Regional Meals Outside Taipei:</td><td style="text-align: right;"><strong>NT$5,760</strong> (~₱10,253 PHP)</td></tr>
             <tr style="font-size: 15px; color: #059669; border-top: 2px solid #0f172a;">
               <td><strong>TOTAL SHARED BUDGET (2 Persons):</strong></td>
-              <td style="text-align: right;"><strong>NT$45,990</strong> (~₱81,862 PHP)</td>
+              <td style="text-align: right;"><strong>NT$47,170</strong> (~₱83,963 PHP)</td>
             </tr>
             <tr style="font-size: 14px; color: #2563eb;">
               <td><strong>PER PERSON BREAKDOWN:</strong></td>
-              <td style="text-align: right;"><strong>NT$22,995</strong> (~₱40,931 PHP / AUD $1,085)</td>
+              <td style="text-align: right;"><strong>NT$23,585</strong> (~₱41,981 PHP / AUD $1,110)</td>
             </tr>
           </tbody>
         </table>
@@ -789,6 +844,6 @@
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <!-- Application JS -->
-  <script src="app.js?v=3.5"></script>
+  <script src="app.js?v=3.6"></script>
 </body>
 </html>
