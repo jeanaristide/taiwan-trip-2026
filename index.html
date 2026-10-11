@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
   <!-- Custom Styles with Cache Buster -->
-  <link rel="stylesheet" href="styles.css?v=3.6">
+  <link rel="stylesheet" href="styles.css?v=4.0">
 
   <!-- Guaranteed Inline Underline Styles (Bypasses Browser CSS Caches) -->
   <style>
@@ -108,6 +108,46 @@
         </div>
       </div>
 
+      <!-- Interactive Master Trip Calendar Overview (Nov 2026) -->
+      <div class="itinerary-calendar-pane" id="itineraryCalendarPane">
+        <div class="cal-pane-header">
+          <div class="cal-pane-title-group">
+            <span class="cal-pane-title">
+              <span>📅 Trip Calendar Overview</span>
+              <span class="cal-route-badge">10 Days · 4 Key Regions · 13 Nov 2026 – 22 Nov 2026</span>
+            </span>
+            <span class="cal-pane-hint">👆 Tap any day to focus map &amp; inspect daily schedule</span>
+          </div>
+          <!-- Region Filter & Legend Chips -->
+          <div class="cal-legend-bar" id="calLegendBar">
+            <button type="button" class="cal-legend-chip active" data-region="all">All (10 Days)</button>
+            <button type="button" class="cal-legend-chip chip-taipei" data-region="taipei">🏙️ Taipei &amp; Wulai (4N)</button>
+            <button type="button" class="cal-legend-chip chip-chiayi" data-region="chiayi-alishan">🌲 Chiayi &amp; Alishan (3N)</button>
+            <button type="button" class="cal-legend-chip chip-taichung" data-region="taichung-nantou">🛶 Taichung &amp; Nantou (2N)</button>
+            <button type="button" class="cal-legend-chip chip-keelung" data-region="keelung">🌊 Keelung Coast (Day Tour)</button>
+          </div>
+        </div>
+
+        <!-- Month Calendar Container -->
+        <div class="cal-months-wrapper" id="calMonthsWrapper">
+          <div class="cal-month-card active-tab" id="calMonthNov">
+            <div class="cal-month-header">
+              <span class="cal-month-name">🍁 November 2026</span>
+              <span class="cal-month-badge">10 Trip Days (Nov 13–22)</span>
+            </div>
+            <div class="cal-weekdays">
+              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div class="cal-days-grid" id="calGridNov"></div>
+          </div>
+        </div>
+
+        <!-- Selected Day Detail Drawer / Quick Action Bar -->
+        <div class="cal-selected-drawer" id="calSelectedDrawer">
+          <div class="cal-drawer-content" id="calDrawerContent"></div>
+        </div>
+      </div>
+
       <!-- Itinerary Route Overview Navigation Bar on Top of Map -->
       <div class="itinerary-nav-pane">
         <div class="itinerary-nav-header">
@@ -191,7 +231,7 @@
         </thead>
         <tbody>
           <!-- Day 1 -->
-          <tr class="itinerary-table-row" data-region="taipei">
+          <tr class="itinerary-table-row" id="tableRow-Day-1" data-region="taipei">
             <td>
               <div class="col-day-wrap">
                 <span class="day-badge">Day 1</span>
@@ -232,7 +272,7 @@
           </tr>
 
           <!-- Day 2 -->
-          <tr class="itinerary-table-row" data-region="taipei">
+          <tr class="itinerary-table-row" id="tableRow-Day-2" data-region="taipei">
             <td>
               <div class="col-day-wrap">
                 <span class="day-badge">Day 2</span>
@@ -316,7 +356,7 @@
           </tr>
 
           <!-- Day 3 -->
-          <tr class="itinerary-table-row" data-region="chiayi-alishan">
+          <tr class="itinerary-table-row" id="tableRow-Day-3" data-region="chiayi-alishan">
             <td>
               <div class="col-day-wrap">
                 <span class="day-badge">Day 3</span>
@@ -362,7 +402,7 @@
           </tr>
 
           <!-- Day 4 -->
-          <tr class="itinerary-table-row" data-region="chiayi-alishan">
+          <tr class="itinerary-table-row" id="tableRow-Day-4" data-region="chiayi-alishan">
             <td>
               <div class="col-day-wrap">
                 <span class="day-badge">Day 4</span>
@@ -444,7 +484,7 @@
           </tr>
 
           <!-- Day 5 -->
-          <tr class="itinerary-table-row" data-region="chiayi-alishan">
+          <tr class="itinerary-table-row" id="tableRow-Day-5" data-region="chiayi-alishan">
             <td>
               <div class="col-day-wrap">
                 <span class="day-badge">Day 5</span>
@@ -504,7 +544,7 @@
           </tr>
 
           <!-- Day 6 -->
-          <tr class="itinerary-table-row" data-region="taichung-nantou">
+          <tr class="itinerary-table-row" id="tableRow-Day-6" data-region="taichung-nantou">
             <td>
               <div class="col-day-wrap">
                 <span class="day-badge">Day 6</span>
@@ -557,7 +597,7 @@
           </tr>
 
           <!-- Day 7 -->
-          <tr class="itinerary-table-row" data-region="taichung-nantou">
+          <tr class="itinerary-table-row" id="tableRow-Day-7" data-region="taichung-nantou">
             <td>
               <div class="col-day-wrap">
                 <span class="day-badge">Day 7</span>
@@ -609,7 +649,7 @@
           </tr>
 
           <!-- Day 8 -->
-          <tr class="itinerary-table-row" data-region="taipei">
+          <tr class="itinerary-table-row" id="tableRow-Day-8" data-region="taipei">
             <td>
               <div class="col-day-wrap">
                 <span class="day-badge">Day 8</span>
@@ -652,7 +692,7 @@
           </tr>
 
           <!-- Day 9 -->
-          <tr class="itinerary-table-row" data-region="keelung">
+          <tr class="itinerary-table-row" id="tableRow-Day-9" data-region="keelung">
             <td>
               <div class="col-day-wrap">
                 <span class="day-badge">Day 9</span>
@@ -722,7 +762,7 @@
           </tr>
 
           <!-- Day 10 -->
-          <tr class="itinerary-table-row" data-region="taipei">
+          <tr class="itinerary-table-row" id="tableRow-Day-10" data-region="taipei">
             <td>
               <div class="col-day-wrap">
                 <span class="day-badge">Day 10</span>
@@ -854,6 +894,6 @@
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <!-- Application JS -->
-  <script src="app.js?v=3.6"></script>
+  <script src="app.js?v=4.0"></script>
 </body>
 </html>

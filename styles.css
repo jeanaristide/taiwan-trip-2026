@@ -247,6 +247,506 @@ body {
   color: #b45309;
 }
 
+/* ===================================================
+   INTERACTIVE TRIP CALENDAR OVERVIEW
+   =================================================== */
+.itinerary-calendar-pane {
+  margin-top: 14px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 18px 20px 16px;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+}
+
+.cal-pane-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.cal-pane-title-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cal-pane-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cal-route-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.cal-pane-hint {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* Region Legend & Filter Bar */
+.cal-legend-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.cal-legend-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  user-select: none;
+}
+
+.cal-legend-chip:hover {
+  transform: translateY(-1px);
+  border-color: #94a3b8;
+  background: #f1f5f9;
+}
+
+.cal-legend-chip.active {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 700;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.cal-legend-chip.chip-taipei.active {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.cal-legend-chip.chip-chiayi.active {
+  border-color: #059669;
+  background: #ecfdf5;
+  color: #047857;
+  box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.2);
+}
+
+.cal-legend-chip.chip-taichung.active {
+  border-color: #d97706;
+  background: #fffbeb;
+  color: #b45309;
+  box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.2);
+}
+
+.cal-legend-chip.chip-keelung.active {
+  border-color: #7c3aed;
+  background: #f5f3ff;
+  color: #6d28d9;
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+}
+
+/* Month Calendar Container */
+.cal-months-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+.cal-month-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.cal-month-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 0 2px;
+}
+
+.cal-month-name {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.cal-month-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #475569;
+  background: #e2e8f0;
+  border-radius: 9999px;
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.cal-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+  min-width: 0;
+}
+
+/* Individual Calendar Day Cell */
+.cal-day-cell {
+  min-height: 66px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 6px 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+  text-align: left;
+  min-width: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.cal-day-cell:hover:not(.pad-day):not(.non-trip-day) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-color: #94a3b8;
+}
+
+.cal-day-cell.pad-day {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}
+
+.cal-day-cell.non-trip-day {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  color: #94a3b8;
+  cursor: default;
+}
+
+.cal-day-cell.non-trip-day:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: #e2e8f0;
+}
+
+.cal-day-cell.is-selected {
+  border-width: 2px !important;
+  transform: translateY(-2px);
+  z-index: 5;
+}
+
+.cal-day-cell.is-dimmed {
+  opacity: 0.25 !important;
+  filter: grayscale(80%) !important;
+}
+
+/* Day Cell Internals */
+.cal-day-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.cal-day-num {
+  font-size: 12px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.cal-day-cell.non-trip-day .cal-day-num {
+  color: #94a3b8;
+}
+
+.cal-day-badge {
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 1.5px 5px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.cal-day-body {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.cal-day-flag {
+  font-size: 14px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cal-day-city {
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+/* Region-Specific Color Themes */
+/* Taipei & Wulai */
+.cal-day-cell.region-taipei {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+.cal-day-cell.region-taipei .cal-day-badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+  border: 1px solid #93c5fd;
+}
+.cal-day-cell.region-taipei .cal-day-num {
+  color: #1e3a8a;
+}
+.cal-day-cell.region-taipei .cal-day-city {
+  color: #1d4ed8;
+}
+.cal-day-cell.region-taipei.is-selected {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35), 0 4px 12px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Chiayi & Alishan */
+.cal-day-cell.region-chiayi-alishan {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+}
+.cal-day-cell.region-chiayi-alishan .cal-day-badge {
+  background: #d1fae5;
+  color: #047857;
+  border: 1px solid #6ee7b7;
+}
+.cal-day-cell.region-chiayi-alishan .cal-day-num {
+  color: #064e3b;
+}
+.cal-day-cell.region-chiayi-alishan .cal-day-city {
+  color: #047857;
+}
+.cal-day-cell.region-chiayi-alishan.is-selected {
+  border-color: #059669 !important;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.35), 0 4px 12px rgba(5, 150, 105, 0.2) !important;
+}
+
+/* Taichung & Nantou */
+.cal-day-cell.region-taichung-nantou {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+.cal-day-cell.region-taichung-nantou .cal-day-badge {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fcd34d;
+}
+.cal-day-cell.region-taichung-nantou .cal-day-num {
+  color: #78350f;
+}
+.cal-day-cell.region-taichung-nantou .cal-day-city {
+  color: #b45309;
+}
+.cal-day-cell.region-taichung-nantou.is-selected {
+  border-color: #d97706 !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.35), 0 4px 12px rgba(217, 119, 6, 0.2) !important;
+}
+
+/* Keelung Coast */
+.cal-day-cell.region-keelung {
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+}
+.cal-day-cell.region-keelung .cal-day-badge {
+  background: #ede9fe;
+  color: #6d28d9;
+  border: 1px solid #c4b5fd;
+}
+.cal-day-cell.region-keelung .cal-day-num {
+  color: #4c1d95;
+}
+.cal-day-cell.region-keelung .cal-day-city {
+  color: #6d28d9;
+}
+.cal-day-cell.region-keelung.is-selected {
+  border-color: #7c3aed !important;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.35), 0 4px 12px rgba(124, 58, 237, 0.2) !important;
+}
+
+/* Selected Day Drawer / Quick Action Bar */
+.cal-selected-drawer {
+  margin-top: 14px;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: none;
+  animation: calDrawerFadeIn 0.25s ease-out;
+}
+
+.cal-selected-drawer.active {
+  display: block;
+}
+
+@keyframes calDrawerFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cal-drawer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cal-drawer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cal-drawer-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cal-drawer-tag {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2.5px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.cal-drawer-tag.region-taipei { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+.cal-drawer-tag.region-chiayi-alishan { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+.cal-drawer-tag.region-taichung-nantou { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+.cal-drawer-tag.region-keelung { background: #f3e8ff; color: #6b21a8; border: 1px solid #ddd6fe; }
+
+.cal-drawer-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.cal-drawer-desc {
+  font-size: 12px;
+  color: #475569;
+  max-width: 680px;
+  line-height: 1.45;
+}
+
+.cal-drawer-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cal-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  font-size: 11.5px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  user-select: none;
+}
+
+.cal-action-btn:hover {
+  transform: translateY(-1px);
+  border-color: #94a3b8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.cal-action-btn.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #1d4ed8;
+}
+
+.cal-action-btn.btn-primary:hover {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+/* Table Row Focus Highlight Animation */
+@keyframes tableRowPulse {
+  0% { background-color: rgba(37, 99, 235, 0.25); }
+  50% { background-color: rgba(37, 99, 235, 0.12); }
+  100% { background-color: transparent; }
+}
+
+.table-row-highlight {
+  animation: tableRowPulse 2.5s ease-out forwards;
+}
+
 /* Itinerary Navigation Overview Bar */
 .itinerary-nav-pane {
   margin-top: 14px;
@@ -1004,6 +1504,90 @@ footer strong {
     height: 340px;
     border-radius: var(--radius-sm);
   }
+
+  /* Responsive Calendar Pane */
+  .itinerary-calendar-pane {
+    padding: 12px 10px 12px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+  }
+  .cal-pane-title {
+    font-size: 12px;
+  }
+  .cal-route-badge {
+    font-size: 9.5px;
+    padding: 1px 7px;
+  }
+  .cal-pane-hint {
+    font-size: 10.5px;
+  }
+  .cal-legend-bar {
+    gap: 5px;
+  }
+  .cal-legend-chip {
+    font-size: 10.5px;
+    padding: 3.5px 9px;
+  }
+  .cal-month-card {
+    padding: 10px 8px 10px;
+  }
+  .cal-month-name {
+    font-size: 12px;
+  }
+  .cal-month-badge {
+    font-size: 9.5px;
+    padding: 1.5px 7px;
+  }
+  .cal-weekdays {
+    gap: 3px;
+    font-size: 9.5px;
+    margin-bottom: 5px;
+  }
+  .cal-days-grid {
+    gap: 3px;
+  }
+  .cal-day-cell {
+    min-height: 52px;
+    padding: 3px 3px;
+  }
+  .cal-day-num {
+    font-size: 10.5px;
+  }
+  .cal-day-badge {
+    font-size: 8px;
+    padding: 1px 3px;
+  }
+  .cal-day-body {
+    gap: 2px;
+    margin-top: 2px;
+  }
+  .cal-day-flag {
+    font-size: 11px;
+  }
+  .cal-day-city {
+    font-size: 8px;
+  }
+  .cal-selected-drawer {
+    padding: 10px 12px;
+    margin-top: 10px;
+  }
+  .cal-drawer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .cal-drawer-actions {
+    width: 100%;
+    display: flex;
+    gap: 6px;
+  }
+  .cal-action-btn {
+    flex: 1;
+    justify-content: center;
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
   .itinerary-nav-pane {
     padding: 10px 10px 8px;
   }

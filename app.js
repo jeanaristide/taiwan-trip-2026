@@ -199,6 +199,180 @@ const itineraryOverviewStops = [
   { id: "leg10", step: 10, flag: "🏛️", title: "Temple Worship & TPE", sub: "22 Nov · Day 10", coords: [25.0298, 121.5284], zoom: 14 }
 ];
 
+// Master Trip Calendar Data (November 2026)
+const tripCalendarData = {
+  '2026-11-13': {
+    dateKey: '2026-11-13',
+    dayNum: 13,
+    dayLabel: 'Day 1',
+    dayBadge: 'D1',
+    region: 'taipei',
+    regionClass: 'region-taipei',
+    regionLabel: 'Taipei Base',
+    flag: '🏙️',
+    city: 'Taipei (Ximending Base)',
+    title: 'Arrival in Taipei & Hotel Base Check-In',
+    summary: 'Sister arrives from Sydney (SYD); User arrives from Manila (MNL). Airport MRT Express straight to Taipei Main Station, quick taxi to Just Sleep Taipei Ximending. Unpack, settle in, and evening dinner in Taipei.',
+    coords: [25.0441, 121.5085],
+    zoom: 14,
+    overviewIndex: 0,
+    tableDayId: 'Day-1'
+  },
+  '2026-11-14': {
+    dateKey: '2026-11-14',
+    dayNum: 14,
+    dayLabel: 'Day 2',
+    dayBadge: 'D2',
+    region: 'taipei',
+    regionClass: 'region-taipei',
+    regionLabel: 'Wulai Gorge Excursion',
+    flag: '🌿',
+    city: 'Wulai Gorge & Forest',
+    title: 'Wulai Indigenous Valley (DIY) vs Taipingshan Tour',
+    summary: 'Bus 849 along the Nanshi River gorge to Wulai Old Street. Ride the historic Wulai Scenic Train to 80m Wulai Falls, savor wild boar roast skewers, bamboo sticky rice, and riverside hot springs (or Klook Taipingshan & Jiuzhize hot springs tour). Return to Taipei.',
+    coords: [24.8550, 121.5515],
+    zoom: 14,
+    overviewIndex: 1,
+    tableDayId: 'Day-2'
+  },
+  '2026-11-15': {
+    dateKey: '2026-11-15',
+    dayNum: 15,
+    dayLabel: 'Day 3',
+    dayBadge: 'D3',
+    region: 'chiayi-alishan',
+    regionClass: 'region-chiayi-alishan',
+    regionLabel: 'Chiayi & CCU Alumni Visit',
+    flag: '🎓',
+    city: 'Taipei ➔ Chiayi & CCU',
+    title: 'Sunday LDS Worship ➔ Bullet Train to Chiayi & CCU Campus',
+    summary: 'Attend Sunday LDS worship at Taipei Taiwan Temple / Jinhua St Chapel (09:00–12:00). Leave 3 large suitcases in free multi-day luggage storage at Just Sleep Taipei; take 13:00 THSR Bullet Train to Chiayi with only carry-on bags. Drop bags at Chiayi hotel first, then visit CCU Minxiong campus & Wenhua Rd turkey rice dinner.',
+    coords: [23.5586, 120.4719],
+    zoom: 14,
+    overviewIndex: 2,
+    tableDayId: 'Day-3'
+  },
+  '2026-11-16': {
+    dateKey: '2026-11-16',
+    dayNum: 16,
+    dayLabel: 'Day 4',
+    dayBadge: 'D4',
+    region: 'chiayi-alishan',
+    regionClass: 'region-chiayi-alishan',
+    regionLabel: 'Fenqihu & Alishan (Night 1)',
+    flag: '🌲',
+    city: 'Fenqihu & Alishan High Forest',
+    title: 'Alishan Forest Railway ➔ Fenqihu Bag Drop ➔ Alishan Sacred Trees',
+    summary: 'Board historic Alishan Forest Railway from Chiayi to Fenqihu. Drop carry-on bags at Yeashow Villa front desk first (1 min from station). Savor hot Fenqihu Railway Bento, then shuttle up to Alishan Forest Recreation Area: Zhaoping train, Sister Ponds, and Giant Tree Cluster Trail (800–2,000+ yr red cypresses). Night 1 at Yeashow Villa.',
+    coords: [23.5051, 120.6949],
+    zoom: 13,
+    overviewIndex: 3,
+    tableDayId: 'Day-4'
+  },
+  '2026-11-17': {
+    dateKey: '2026-11-17',
+    dayNum: 17,
+    dayLabel: 'Day 5',
+    dayBadge: 'D5',
+    region: 'chiayi-alishan',
+    regionClass: 'region-chiayi-alishan',
+    regionLabel: 'Alishan Forest (Night 2)',
+    flag: '🌅',
+    city: 'Zhushan Sunrise & Alishan Trails',
+    title: 'Zhushan Sunrise over Yushan ➔ Eryanping or Shuishan Cedar Trail',
+    summary: 'Dawn Zhushan Sunrise narrow-gauge train to Taiwan\'s highest station (2,451m). Walk to Ogasawara 360° observation deck for golden sunrise illuminating Yushan (Jade Mountain). Daytime choice (bags safely stored at Yeashow Villa): misty tea terraces of Eryanping Trail in Xiding or serene 2,700-yr Shuishan Giant Tree. Night 2 at Yeashow Villa.',
+    coords: [23.5136, 120.8131],
+    zoom: 14,
+    overviewIndex: 4,
+    tableDayId: 'Day-5'
+  },
+  '2026-11-18': {
+    dateKey: '2026-11-18',
+    dayNum: 18,
+    dayLabel: 'Day 6',
+    dayBadge: 'D6',
+    region: 'taichung-nantou',
+    regionClass: 'region-taichung-nantou',
+    regionLabel: 'Sun Moon Lake & Taichung Base',
+    flag: '🛶',
+    city: 'Sun Moon Lake & Taichung',
+    title: 'Fast THSR to Taichung (Drop Bags First) ➔ Hands-Free Sun Moon Lake Cruise',
+    summary: 'Morning transfer down from Fenqihu to Chiayi THSR; 22-min bullet train to Taichung. Quick taxi to Taichung Hotel Base to deposit carry-ons (100% luggage-free!). Express Bus 6670 to Sun Moon Lake: lake ferry cruise to Ita Thao pier and CNN Top 10 over-water bikeway to Xiangshan Visitor Center. Night 1 at Taichung Hotel Base.',
+    coords: [23.8524, 120.9150],
+    zoom: 13,
+    overviewIndex: 5,
+    tableDayId: 'Day-6'
+  },
+  '2026-11-19': {
+    dateKey: '2026-11-19',
+    dayNum: 19,
+    dayLabel: 'Day 7',
+    dayBadge: 'D7',
+    region: 'taichung-nantou',
+    regionClass: 'region-taichung-nantou',
+    regionLabel: 'Formosan Village & Taichung WFH',
+    flag: '🚡',
+    city: 'Formosan Village & Taichung',
+    title: 'Formosan Aboriginal Village & Lake Ropeway ➔ Rainbow Village & WFH Window',
+    summary: 'Direct express coach to Formosan Aboriginal Culture Village and alpine Sun Moon Lake Ropeway. Afternoon taxi to colorful Rainbow Village murals. 16:00–17:00 mandatory quiet WFH meeting window at Taichung hotel. Evening stroll to National Taichung Theater & Fengjia Night Market. Night 2 at Taichung Hotel Base.',
+    coords: [23.8653, 120.9482],
+    zoom: 13,
+    overviewIndex: 6,
+    tableDayId: 'Day-7'
+  },
+  '2026-11-20': {
+    dateKey: '2026-11-20',
+    dayNum: 20,
+    dayLabel: 'Day 8',
+    dayBadge: 'D8',
+    region: 'taipei',
+    regionClass: 'region-taipei',
+    regionLabel: 'Taipei & Alumni Reunion',
+    flag: '🚆',
+    city: 'Return to Taipei & Reunion',
+    title: 'THSR Bullet Train to Taipei ➔ Alumni Friends Reunion Dinner',
+    summary: 'Mid-morning THSR Bullet Train back to Taipei Main Station (45 mins). Quick taxi to Just Sleep Taipei Ximending; check in and retrieve 3 stored large checked suitcases from front desk. Rest and prepare for lively Friday evening dinner reunion with university master\'s friends in Taipei!',
+    coords: [25.0441, 121.5085],
+    zoom: 14,
+    overviewIndex: 7,
+    tableDayId: 'Day-8'
+  },
+  '2026-11-21': {
+    dateKey: '2026-11-21',
+    dayNum: 21,
+    dayLabel: 'Day 9',
+    dayBadge: 'D9',
+    region: 'keelung',
+    regionClass: 'region-keelung',
+    regionLabel: 'Northeast Coast Excursion',
+    flag: '🌊',
+    city: 'Keelung & Northeast Coast',
+    title: 'Northeast Coast: Shen\'ao Rail Bike, Heping Island & Miaokou Market',
+    summary: 'Spectacular Pacific coastal excursion: pedal along ocean bluffs on Shen\'ao Rail Bike, photograph Zhengbin Port rainbow color houses, and explore Tofu rock formations at Heping Island GeoPark (or Bitou Cape Little Great Wall trail). Feast on fresh seafood at Keelung Miaokou Night Market before returning to Taipei.',
+    coords: [25.1450, 121.7900],
+    zoom: 13,
+    overviewIndex: 8,
+    tableDayId: 'Day-9'
+  },
+  '2026-11-22': {
+    dateKey: '2026-11-22',
+    dayNum: 22,
+    dayLabel: 'Day 10',
+    dayBadge: 'D10',
+    region: 'taipei',
+    regionClass: 'region-taipei',
+    regionLabel: 'LDS Worship & TPE Departure',
+    flag: '🏛️',
+    city: 'Taipei Worship & Airport Departures',
+    title: 'Sunday LDS Worship & Temple ➔ Taoyuan Airport Departures',
+    summary: 'Sunday morning LDS worship service and temple visit at Taipei Taiwan Temple / Jinhua St Chapel. Final souvenir shopping and beef noodles in Ximending. Retrieve luggage from Just Sleep Taipei, take Airport MRT Express to TPE for evening flights home (Sister to Sydney, Jean to Manila).',
+    coords: [25.0298, 121.5284],
+    zoom: 14,
+    overviewIndex: 9,
+    tableDayId: 'Day-10'
+  }
+};
+
 // Chronological Flight and Transit Path Across Taiwan
 const chronologicalRouteCoords = [
   [25.0797, 121.2342], // TPE Airport
@@ -416,7 +590,7 @@ function renderItineraryNavBar() {
 }
 
 // Focus Map on Stop
-function focusOverviewStop(index) {
+function focusOverviewStop(index, skipCalendarSync = false) {
   const stop = itineraryOverviewStops[index];
   if (!stop || !map) return;
 
@@ -429,6 +603,246 @@ function focusOverviewStop(index) {
     duration: 1.0,
     easeLinearity: 0.25
   });
+
+  if (!skipCalendarSync) {
+    const matchingDateKey = Object.keys(tripCalendarData).find(k => tripCalendarData[k].overviewIndex === index);
+    if (matchingDateKey) {
+      document.querySelectorAll('.cal-day-cell').forEach(c => c.classList.remove('is-selected'));
+      const cell = document.querySelector(`.cal-day-cell[data-date="${matchingDateKey}"]`);
+      if (cell) cell.classList.add('is-selected');
+      updateCalendarDrawer(tripCalendarData[matchingDateKey]);
+    }
+  }
+}
+
+// Render Master Trip Calendar (November 2026)
+function renderTripCalendar() {
+  const novGrid = document.getElementById('calGridNov');
+  if (!novGrid) return;
+
+  novGrid.innerHTML = '';
+
+  // November 2026 (Sun to Sat grid: 1 Nov 2026 is Sunday -> 0 leading pad days)
+  for (let d = 1; d <= 30; d++) {
+    const dateKey = `2026-11-${String(d).padStart(2, '0')}`;
+    const cell = document.createElement('div');
+    const info = tripCalendarData[dateKey];
+
+    if (info) {
+      cell.className = `cal-day-cell ${info.regionClass}`;
+      cell.setAttribute('data-date', dateKey);
+      cell.setAttribute('data-region', info.region);
+      cell.setAttribute('title', `${info.dayLabel}: ${info.city}`);
+      cell.innerHTML = `
+        <div class="cal-day-top">
+          <span class="cal-day-num">${d}</span>
+          <span class="cal-day-badge">${info.dayBadge}</span>
+        </div>
+        <div class="cal-day-body">
+          <span class="cal-day-flag">${info.flag}</span>
+          <span class="cal-day-city">${info.city}</span>
+        </div>
+      `;
+      cell.addEventListener('click', () => {
+        selectCalendarDay(dateKey);
+      });
+    } else {
+      cell.className = 'cal-day-cell non-trip-day';
+      cell.setAttribute('title', `${d} Nov 2026`);
+      cell.innerHTML = `
+        <div class="cal-day-top">
+          <span class="cal-day-num">${d}</span>
+        </div>
+      `;
+    }
+    novGrid.appendChild(cell);
+  }
+
+  // Trailing pad days for Nov (Nov 30 is Monday -> Tue 1 to Sat 5 Dec to complete 5th week: 35 cells)
+  const novPadPost = [1, 2, 3, 4, 5];
+  novPadPost.forEach(num => {
+    const pad = document.createElement('div');
+    pad.className = 'cal-day-cell pad-day';
+    pad.innerHTML = `<div class="cal-day-top"><span class="cal-day-num">${num}</span></div>`;
+    novGrid.appendChild(pad);
+  });
+
+  // Setup Legend Region Filter Chips
+  const legendChips = document.querySelectorAll('#calLegendBar .cal-legend-chip');
+  legendChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const region = chip.getAttribute('data-region');
+      filterCalendarByRegion(region);
+    });
+  });
+
+  // Select Day 1 by default on initial page load
+  const defaultDate = '2026-11-13';
+  const defaultCell = document.querySelector(`.cal-day-cell[data-date="${defaultDate}"]`);
+  if (defaultCell) {
+    defaultCell.classList.add('is-selected');
+    updateCalendarDrawer(tripCalendarData[defaultDate]);
+  }
+
+  // Support URL query parameters ?day=YYYY-MM-DD or ?day=1..10
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const qDay = urlParams.get('day');
+    if (qDay) {
+      if (tripCalendarData[qDay]) {
+        selectCalendarDay(qDay);
+      } else if (!isNaN(parseInt(qDay, 10))) {
+        const dayNum = parseInt(qDay, 10);
+        const targetDate = `2026-11-${String(dayNum + 12).padStart(2, '0')}`;
+        if (tripCalendarData[targetDate]) {
+          selectCalendarDay(targetDate);
+        }
+      }
+    }
+  } catch (e) {
+    // ignore
+  }
+}
+
+// Select a day in the calendar
+function selectCalendarDay(dateKey, shouldScrollTable = false) {
+  const info = tripCalendarData[dateKey];
+  if (!info) return;
+
+  document.querySelectorAll('.cal-day-cell').forEach(c => c.classList.remove('is-selected'));
+  const activeCells = document.querySelectorAll(`.cal-day-cell[data-date="${dateKey}"]`);
+  activeCells.forEach(c => c.classList.add('is-selected'));
+
+  updateCalendarDrawer(info);
+
+  if (info.coords && map) {
+    map.flyTo(info.coords, info.zoom || 13, {
+      duration: 1.0,
+      easeLinearity: 0.25
+    });
+  }
+
+  // Synchronize top route overview chip
+  if (typeof info.overviewIndex === 'number') {
+    document.querySelectorAll('.itinerary-stop-chip').forEach(c => {
+      c.classList.toggle('active', parseInt(c.getAttribute('data-index'), 10) === info.overviewIndex);
+    });
+  }
+
+  if (shouldScrollTable && info.tableDayId) {
+    scrollToItineraryDay(info.tableDayId);
+  }
+}
+
+// Update the Selected Day Drawer
+function updateCalendarDrawer(info) {
+  const drawer = document.getElementById('calSelectedDrawer');
+  const drawerContent = document.getElementById('calDrawerContent');
+  if (!drawer || !drawerContent || !info) return;
+
+  const dateParts = info.dateKey.split('-');
+  const dateFormatted = `${parseInt(dateParts[2], 10)} Nov 2026`;
+
+  drawerContent.innerHTML = `
+    <div class="cal-drawer-inner">
+      <div class="cal-drawer-info">
+        <div class="cal-drawer-title-row">
+          <span class="cal-drawer-tag ${info.regionClass}">${info.flag} ${info.dayLabel} · ${info.regionLabel}</span>
+          <span class="cal-drawer-title">${dateFormatted}: ${info.city}</span>
+        </div>
+        <div class="cal-drawer-desc">
+          <strong>${info.title}:</strong> ${info.summary}
+        </div>
+      </div>
+      <div class="cal-drawer-actions">
+        <button type="button" class="cal-action-btn btn-primary" id="calBtnFlyMap">
+          <span>🗺️ Focus Map on ${info.city.split('➔')[0].trim()}</span>
+        </button>
+        ${info.tableDayId ? `
+        <button type="button" class="cal-action-btn" id="calBtnScrollTable">
+          <span>📋 View Schedule in Table</span>
+        </button>` : ''}
+      </div>
+    </div>
+  `;
+
+  drawer.classList.add('active');
+
+  const flyBtn = document.getElementById('calBtnFlyMap');
+  if (flyBtn) {
+    flyBtn.addEventListener('click', () => {
+      if (typeof info.overviewIndex === 'number') {
+        focusOverviewStop(info.overviewIndex);
+      } else if (info.coords && map) {
+        map.flyTo(info.coords, info.zoom || 13, {
+          duration: 1.0,
+          easeLinearity: 0.25
+        });
+      }
+    });
+  }
+
+  const scrollBtn = document.getElementById('calBtnScrollTable');
+  if (scrollBtn && info.tableDayId) {
+    scrollBtn.addEventListener('click', () => {
+      scrollToItineraryDay(info.tableDayId);
+    });
+  }
+}
+
+// Filter Calendar Days by Region
+function filterCalendarByRegion(region) {
+  const chips = document.querySelectorAll('#calLegendBar .cal-legend-chip');
+  chips.forEach(chip => {
+    const chipRegion = chip.getAttribute('data-region');
+    chip.classList.toggle('active', chipRegion === region);
+  });
+
+  const dayCells = document.querySelectorAll('.cal-day-cell[data-region]');
+  if (region === 'all') {
+    dayCells.forEach(cell => cell.classList.remove('is-dimmed'));
+    return;
+  }
+
+  dayCells.forEach(cell => {
+    const cellRegion = cell.getAttribute('data-region');
+    cell.classList.toggle('is-dimmed', cellRegion !== region);
+  });
+
+  // Automatically focus on the first day of that region
+  const firstMatchingDate = Object.keys(tripCalendarData).find(key => tripCalendarData[key].region === region);
+  if (firstMatchingDate) {
+    selectCalendarDay(firstMatchingDate);
+  }
+}
+
+// Scroll to Itinerary Day in Master Table
+function scrollToItineraryDay(dayId) {
+  // Reset table filter button to 'all' if the row might be filtered out
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach(btn => {
+    if (btn.getAttribute('data-filter') === 'all') {
+      btn.click();
+    }
+  });
+
+  const cleanDayStr = dayId.replace('-', ' ').trim().toLowerCase();
+  let row = document.getElementById(`tableRow-${dayId}`);
+  if (!row) {
+    const rows = document.querySelectorAll('.itinerary-table-row');
+    row = Array.from(rows).find(r => {
+      const badge = r.querySelector('.day-badge');
+      return badge && badge.textContent.trim().toLowerCase() === cleanDayStr;
+    });
+  }
+
+  if (row) {
+    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    row.classList.add('table-row-highlight');
+    setTimeout(() => {
+      row.classList.remove('table-row-highlight');
+    }, 2500);
+  }
 }
 
 // Setup Map Layer Buttons
@@ -488,6 +902,7 @@ function setupTableFilters() {
 // DOM Ready Init
 document.addEventListener('DOMContentLoaded', () => {
   renderItineraryNavBar();
+  renderTripCalendar();
   initMap();
   setupMapToggles();
   setupTableFilters();
